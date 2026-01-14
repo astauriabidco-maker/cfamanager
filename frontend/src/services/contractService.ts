@@ -53,7 +53,7 @@ export interface ContratDossier {
 
 const contractService = {
     getContrats: async (): Promise<ContratDossier[]> => {
-        const response = await api.get('/contrats');
+        const response = await api.get('/contrats/');
         return response.data;
     },
 
@@ -68,7 +68,7 @@ const contractService = {
     },
 
     createContrat: async (data: ContratCreate) => {
-        const response = await api.post('/contrats', data);
+        const response = await api.post('/contrats/', data);
         return response.data;
     },
 

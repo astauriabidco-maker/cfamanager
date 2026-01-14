@@ -16,7 +16,18 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI(title="CFA Manager API", version="1.0.0")
 
 # Add Middleware
+from fastapi.middleware.cors import CORSMiddleware
+
+# Add Middleware
 app.add_middleware(AuditMiddleware)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "http://localhost:3000", "*"], # Allow frontend dev server
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Include Routers
 app.include_router(candidats.router)

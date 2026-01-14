@@ -153,6 +153,8 @@ def get_contrat_active(
     current_user: User = Depends(get_current_user)
 ):
     dossier = db.query(ContratDossier).options(
+        joinedload(ContratDossier.candidat),
+        joinedload(ContratDossier.entreprise),
         joinedload(ContratDossier.versions)
     ).filter(
         ContratDossier.id == dossier_id, 

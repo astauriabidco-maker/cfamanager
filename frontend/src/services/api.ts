@@ -7,6 +7,10 @@ const api = axios.create({
     },
 });
 
+console.log('API Base URL:', api.defaults.baseURL);
+console.log('Environment Mode:', import.meta.env.MODE);
+
+
 // Interceptor to inject Token
 api.interceptors.request.use(
     (config) => {

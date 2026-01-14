@@ -7,6 +7,7 @@ import Layout from './components/Layout';
 import Recrutement from './pages/Recrutement';
 import ContratList from './pages/Contrats/ContratList';
 import ContratDetail from './pages/Contrats/ContratDetail';
+import SessionManager from './pages/Pedagogie/SessionManager';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
               <Route path="/candidats" element={<Recrutement />} />
               <Route path="/contrats" element={<ContratList />} />
               <Route path="/contrats/:id" element={<ContratDetail />} />
-              <Route path="/contrats" element={<div className="font-bold text-gray-500 p-10">Module Contrats (À implémenter)</div>} />
+              <Route path="/pedagogie" element={<SessionManager />} />
               <Route path="/finance" element={<div className="font-bold text-gray-500 p-10">Module Finance (À implémenter)</div>} />
               <Route path="/qualite" element={<div className="font-bold text-gray-500 p-10">Module Qualité (À implémenter)</div>} />
 

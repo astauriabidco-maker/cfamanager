@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+psycopg2-binary
+sqlalchemy
+pyjwt
+passlib[bcrypt]
+python-multipart
+pdfplumber
+weasyprint
+jinja2
+pytest
+httpx
